@@ -142,7 +142,7 @@ module.exports = function(grunt) {
           // Wrap the file in an AMD define fn.
           if(typeof options.amd === "string") {
             // Use a named module
-            output.unshift("define('" + options.amd + "', function(Handlebars) {");
+            output.unshift("define('" + options.amd + "', ['handlebars'], function(Handlebars) {");
           } else {
             // Use an anonymous module
             output.unshift("define(['handlebars'], function(Handlebars) {");
